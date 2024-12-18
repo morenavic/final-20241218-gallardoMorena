@@ -37,8 +37,8 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Cursos',
                 items: [
-                    {label: 'Mis cursos', icon: 'pi pi-fw pi-list-check', routerLink: ['/404']},
-                    {label: 'Nuevo curso', icon: 'pi pi-fw pi-plus', routerLink: ['/new']},
+                    {label: 'Mis cursos', icon: 'pi pi-fw pi-list-check', routerLink: ['/mis-cursos']},
+                    {label: 'Nuevo curso', icon: 'pi pi-fw pi-plus', routerLink: ['/nuevo-curso']},
                     {label: 'Buscar curso', icon: 'pi pi-fw pi-search', routerLink: ['/search']}
                 ]
             },

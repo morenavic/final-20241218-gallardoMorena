@@ -1,0 +1,50 @@
+<div class="content">
+    <h1>Agregar nuevo curso</h1>
+    <p>Los campos con (*) son obligatorios</p>
+    <form (ngSubmit)="guardarCurso()" [formGroup]="formulario">
+        <div class="mb-3">
+            <label for="id" class="form-label">Id (*)</label>
+            <input type="number" class="form-control" id="id" formControlName="id">
+            <div *ngIf="formulario.get('id')?.invalid && formulario.get('id')?.touched">Rellenar campo</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre (*)</label>
+            <input type="string" class="form-control" id="nombre" formControlName="nombre">
+            <div *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">Rellenar campo</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="url" class="form-label">Url (*)</label>
+            <input type="string" class="form-control" id="url" formControlName="url">
+            <div *ngIf="formulario.get('url')?.invalid && formulario.get('id')?.touched">Rellenar campo</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen (*)</label>
+            <input type="string" class="form-control" id="imagen" formControlName="imagen">
+            <div *ngIf="formulario.get('imagen')?.invalid && formulario.get('imagen')?.touched">Rellenar campo</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="cantHoras" class="form-label">Cantidad de horas (*)</label>
+            <input type="number" class="form-control" id="cantHoras" formControlName="cantHoras">
+            <div *ngIf="formulario.get('cantHoras')?.invalid && formulario.get('cantHoras')?.touched">Rellenar campo</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio (*)</label>
+            <input type="number" class="form-control" id="precio" formControlName="precio">
+            <div *ngIf="formulario.get('precio')?.invalid && formulario.get('precio')?.touched">Rellenar campo</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="categoria" class="form-label">Categoria (*)</label>
+            <input type="string" class="form-control" id="categoria" formControlName="categoria">
+            <div *ngIf="formulario.get('categoria')?.invalid && formulario.get('categoria')?.touched">Rellenar campo</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+

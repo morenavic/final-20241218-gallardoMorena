@@ -3,6 +3,8 @@ import {AuthGuard} from "./auth/guards/auth.guard";
 import {FullLayoutComponent} from "./layouts/full/full-layout.component";
 import {ContentLayoutComponent} from "./layouts/content/content-layout.component";
 import {PublicGuard} from "./auth/guards/public.guard";
+import { MisCursosComponent } from './cursos/mis-cursos/mis-cursos.component';
+import { NuevoCursoComponent } from './cursos/nuevo-curso/nuevo-curso.component';
 
 export const routes: Routes = [
   {
@@ -41,6 +43,16 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () => import('./dashboard/pages/home/home.component')
+      },
+      {
+        path: 'nuevo-curso',
+        // loadComponent: () => import('./cursos/nuevo-curso/nuevo-curso.component')
+        component: NuevoCursoComponent
+      },
+      {
+        path: 'mis-cursos',
+        // loadComponent: () => import('./cursos/mis-cursos/mis-cursos.component')
+        component: MisCursosComponent
       },
       {
         path: 'my-profile',
